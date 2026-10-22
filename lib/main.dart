@@ -18,10 +18,58 @@ import 'features/splash/presentation/pages/splash_page.dart';
 import 'shared/presentation/session/session_cubit.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await ScreenUtil.ensureScreenSize();
-  await initInjections();
+  final binding = WidgetsFlutterBinding.ensureInitialized();
+  await _waitForScreenSize(binding);
+  try {
+    await initInjections();
+  } catch (e, st) {
+    // Without runApp the native splash never goes away, so a failed start
+    // looks like a hang. Show the error instead (and log it for logcat).
+    debugPrint('App start failed: $e\n$st');
+    runApp(_StartupError(error: e));
+    return;
+  }
   runApp(const App());
+}
+
+/// ScreenUtil reads the screen size when the text styles are first built,
+/// so wait for the platform to report it. Unlike ScreenUtil.ensureScreenSize
+/// this never defers the first frame and gives up after 2 s, so it cannot
+/// leave the app stuck on the native splash.
+Future<void> _waitForScreenSize(WidgetsBinding binding) async {
+  for (var i = 0; i < 200; i++) {
+    final view = binding.platformDispatcher.implicitView;
+    if (view != null && !view.physicalSize.isEmpty) return;
+    await Future.delayed(const Duration(milliseconds: 10));
+  }
+}
+
+class _StartupError extends StatelessWidget {
+  final Object error;
+
+  const _StartupError({required this.error});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(24),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Something went wrong', style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
+                const SizedBox(height: 12),
+                SelectableText('$error', textAlign: TextAlign.center),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class App extends StatefulWidget {
