@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui' show ImageFilter;
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -92,14 +93,20 @@ class _DetailsBody extends StatelessWidget {
         SliverAppBar(
           expandedHeight: 240.h,
           pinned: true,
-          backgroundColor: style.color,
+          // The header image stays visible (blurred) when collapsed, so the
+          // bar itself has no colour, tint or shadow.
+          backgroundColor: AppColors.transparent,
+          surfaceTintColor: AppColors.transparent,
+          shadowColor: AppColors.transparent,
+          elevation: 0,
+          scrolledUnderElevation: 0,
           foregroundColor: AppColors.white,
           leading: Padding(
             padding: EdgeInsetsDirectional.all(8.sp),
             child: CircleAvatar(backgroundColor: AppColors.black40, child: const BackButton(color: AppColors.white)),
           ),
-          flexibleSpace: FlexibleSpaceBar(
-            background: photos.isNotEmpty
+          flexibleSpace: _BlurredHeader(
+            child: photos.isNotEmpty
                 ? PageView(
                     children: [
                       for (final url in photos)
@@ -266,6 +273,52 @@ class _DetailsBody extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+/// The header photo, kept behind the collapsed app bar: it parallax-scrolls
+/// with the page and blurs in as the bar collapses, instead of fading to a
+/// solid colour like [FlexibleSpaceBar].
+class _BlurredHeader extends StatelessWidget {
+  final Widget child;
+
+  const _BlurredHeader({required this.child});
+
+  static const _maxBlur = 18.0;
+
+  @override
+  Widget build(BuildContext context) {
+    final settings = context.dependOnInheritedWidgetOfExactType<FlexibleSpaceBarSettings>()!;
+    final range = settings.maxExtent - settings.minExtent;
+    final t = range <= 0 ? 1.0 : (1 - (settings.currentExtent - settings.minExtent) / range).clamp(0.0, 1.0);
+    // Blur only kicks in over the last part of the collapse.
+    final blur = Curves.easeIn.transform(t) * _maxBlur;
+
+    return ClipRect(
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          // Parallax: the image moves up at half the scroll speed, the same
+          // as FlexibleSpaceBar's default.
+          Positioned(
+            top: -(settings.maxExtent - settings.currentExtent) / 2,
+            left: 0,
+            right: 0,
+            height: settings.maxExtent,
+            child: child,
+          ),
+          if (blur > 0.1)
+            Positioned.fill(
+              child: IgnorePointer(
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur, tileMode: TileMode.clamp),
+                  child: const SizedBox.expand(),
+                ),
+              ),
+            ),
+        ],
+      ),
     );
   }
 }
