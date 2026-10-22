@@ -9,6 +9,7 @@ import '../../../../../core/translations/l10n.dart';
 import '../../../../../shared/domain/models/business.dart';
 import '../../../../../shared/presentation/widgets/state_views.dart';
 import '../bloc/explore_bloc.dart';
+import '../widgets/business_map_card.dart';
 import '../widgets/business_tile.dart';
 import '../widgets/category_chips.dart';
 import '../widgets/explore_map_view.dart';
@@ -75,7 +76,7 @@ class ExplorePage extends StatelessWidget {
                 child: FadeSlideIn(
                   key: ValueKey(selected.id),
                   from: const Offset(0, 0.3),
-                  child: BusinessTile(
+                  child: BusinessMapCard(
                     business: selected,
                     onTap: () => _open(context, selected),
                   ),
