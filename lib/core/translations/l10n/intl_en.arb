@@ -1,0 +1,422 @@
+{
+  "@@locale": "en",
+  "tryAgain": "Try again",
+  "somethingWentWrong": "Something went wrong",
+  "continueLabel": "Continue",
+  "cancel": "Cancel",
+  "save": "Save",
+  "done": "Done",
+  "close": "Close",
+  "signInTitle": "Enter your phone number",
+  "signInSubtitle": "We will text you a code to sign in. No password needed.",
+  "phoneLabel": "Phone number",
+  "phoneInvalid": "Enter a valid UAE mobile number",
+  "codeTitle": "Enter the code",
+  "resendCode": "Resend code",
+  "resendIn": "Resend in {seconds}s",
+  "@resendIn": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNumber": "Change number",
+  "profileTitle": "Nice to meet you",
+  "profileSubtitle": "Tell us your name so businesses know who you are.",
+  "nameLabel": "Full name",
+  "nameRequired": "Please enter your name",
+  "birthdayLabel": "Birthday (optional)",
+  "birthdayHint": "Some businesses send birthday treats",
+  "tabExplore": "Explore",
+  "tabWallet": "Wallet",
+  "tabScan": "Scan",
+  "tabProfile": "Profile",
+  "searchBusinesses": "Search businesses",
+  "allCategories": "All",
+  "mapView": "Map",
+  "listView": "List",
+  "noBusinessesTitle": "No businesses found",
+  "noBusinessesMessage": "Try another category or search term.",
+  "demoLocationNotice": "Showing Dubai Marina. Turn on location to see what is near you.",
+  "programVisit": "Visit {count} times, get {reward}",
+  "@programVisit": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "reward": {
+        "type": "String"
+      }
+    }
+  },
+  "programPayment": "Pay {count} times, get {reward}",
+  "@programPayment": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "reward": {
+        "type": "String"
+      }
+    }
+  },
+  "minSpendPerStamp": "Minimum spend {amount} per stamp",
+  "@minSpendPerStamp": {
+    "placeholders": {
+      "amount": {
+        "type": "String"
+      }
+    }
+  },
+  "stampsProgress": "{stamps} of {total} stamps",
+  "@stampsProgress": {
+    "placeholders": {
+      "stamps": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "noCardYet": "No stamps yet",
+  "viewBusiness": "View",
+  "readyToRedeem": "Ready to redeem",
+  "programPaused": "Loyalty program paused",
+  "directions": "Directions",
+  "call": "Call",
+  "openingHours": "Opening hours",
+  "address": "Address",
+  "loyaltyProgram": "Loyalty program",
+  "yourProgress": "Your progress",
+  "stampExpiryNote": "Stamps expire {days} days after you collect them.",
+  "@stampExpiryNote": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "payButton": "Pay",
+  "payHere": "Pay here and get your stamp automatically",
+  "about": "About",
+  "payTitle": "Pay {business}",
+  "@payTitle": {
+    "placeholders": {
+      "business": {
+        "type": "String"
+      }
+    }
+  },
+  "amountLabel": "Amount",
+  "enterAmount": "Enter an amount",
+  "payWithApplePay": "Pay with Apple Pay",
+  "processingPayment": "Processing payment…",
+  "paymentSuccessTitle": "Payment successful",
+  "receipt": "Receipt",
+  "business": "Business",
+  "date": "Date",
+  "reference": "Reference",
+  "stampAdded": "Stamp added: {stamps} of {total}",
+  "@stampAdded": {
+    "placeholders": {
+      "stamps": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "cardNowReady": "Your card is full — your reward is ready!",
+  "blockedAlreadyToday": "You already collected a stamp here today. Come back tomorrow!",
+  "blockedBelowMinSpend": "This payment is below the minimum spend for a stamp.",
+  "blockedProgramPaused": "This business has paused its loyalty program.",
+  "viewCard": "View card",
+  "paymentCancelled": "Payment cancelled",
+  "walletTitle": "Wallet",
+  "walletEmptyTitle": "No stamp cards yet",
+  "walletEmptyMessage": "Pay at a participating business or show your QR to staff to collect your first stamp.",
+  "exploreBusinesses": "Explore businesses",
+  "signInToSeeWallet": "Sign in to see your cards",
+  "signInToSeeWalletMessage": "Your stamp cards live here once you collect your first stamp.",
+  "signIn": "Sign in",
+  "stampsToGo": "{count} to go",
+  "@stampsToGo": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "expiresOn": "Next stamp expires {date}",
+  "@expiresOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "reward": "Reward",
+  "terms": "Terms",
+  "stampHistory": "Stamp history",
+  "noStampsYet": "No stamps on this card yet.",
+  "stampSourcePayment": "In-app payment",
+  "stampSourceStaff": "Scanned by staff",
+  "stampSourceAdmin": "Added by support",
+  "cycleLabel": "Card #{number}",
+  "@cycleLabel": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "redeem": "Redeem",
+  "redeemTitle": "Redeem your reward",
+  "redeemInstructions": "Show this code to staff. They will scan it or type the code to confirm.",
+  "redeemSuccessTitle": "Reward redeemed!",
+  "redeemSuccessMessage": "Enjoy {reward}. Your card starts again from zero.",
+  "@redeemSuccessMessage": {
+    "placeholders": {
+      "reward": {
+        "type": "String"
+      }
+    }
+  },
+  "waitingForStaff": "Waiting for staff to confirm…",
+  "myQrTitle": "My QR",
+  "myQrInstructions": "Show this to staff to collect a stamp when you pay by cash or card.",
+  "qrRefreshesIn": "Refreshes in {seconds}s",
+  "@qrRefreshesIn": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "signInForQr": "Sign in to get your QR",
+  "signInForQrMessage": "Your personal QR lets staff add stamps for you.",
+  "programCollect": "Collect {count} stamps, get {reward}",
+  "@programCollect": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "reward": {
+        "type": "String"
+      }
+    }
+  },
+  "guestName": "Guest",
+  "guestSubtitle": "Sign in to collect stamps and pay in the app.",
+  "phone": "Phone",
+  "birthday": "Birthday",
+  "notSet": "Not set",
+  "visitHistory": "Visit history",
+  "visitHistoryEmpty": "Your visits will appear here.",
+  "notifications": "Notifications",
+  "notificationsSubtitle": "Stamps, ready rewards and redemptions",
+  "businessMode": "Business mode",
+  "switchToOwner": "Switch to owner mode",
+  "switchToStaff": "Switch to staff mode",
+  "switchToCustomer": "Switch to customer mode",
+  "logOut": "Log out",
+  "logOutConfirm": "Log out of your account?",
+  "editProfile": "Edit profile",
+  "onboardingTitle1": "All your loyalty cards in one place",
+  "onboardingBody1": "Cafés, salons, barbers, car washes and more — every stamp card lives in one wallet.",
+  "onboardingTitle2": "Pay and get stamped automatically",
+  "onboardingBody2": "Pay with Apple Pay in the app and your stamp lands on your card instantly.",
+  "onboardingTitle3": "Find rewards near you",
+  "onboardingBody3": "Allow location to see participating businesses around you on the map.",
+  "allowLocation": "Allow location",
+  "skip": "Skip",
+  "next": "Next",
+  "getStarted": "Get started",
+  "profileTabTitle": "Profile",
+  "dailyHours": "Daily {hours}",
+  "@dailyHours": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "todayHours": "Today {hours}",
+  "@todayHours": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "closedToday": "Closed today",
+  "modeCustomer": "Customer",
+  "modeOwner": "Owner",
+  "modeStaff": "Staff",
+  "switchBusiness": "Switch business",
+  "accountTab": "Account",
+  "profileSaved": "Profile updated",
+  "staffStampTab": "Stamp",
+  "staffRedeemTab": "Redeem",
+  "staffPaymentsTab": "Payments",
+  "scanCustomerTitle": "Scan customer QR",
+  "scanCustomerHint": "Point the camera at the QR in the customer’s app.",
+  "scanRedemptionTitle": "Scan reward code",
+  "scanRedemptionHint": "Scan the reward QR or type the 6-digit code.",
+  "enterCode": "Enter code",
+  "codeLabel": "Code",
+  "cameraUnavailable": "Camera unavailable. You can type the code instead.",
+  "addStamp": "Add stamp",
+  "stampConfirmed": "Stamp added for {name}",
+  "@stampConfirmed": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "newCustomerCard": "New card — first stamp",
+  "scanNext": "Scan next",
+  "rewardToGive": "Reward to give",
+  "confirmRedeemed": "Confirm redeemed",
+  "rewardConfirmed": "Reward redeemed. The card starts again from zero.",
+  "customerHasReward": "{name} has a reward ready here",
+  "@customerHasReward": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "livePaymentsTitle": "Live payments",
+  "livePaymentsEmpty": "No in-app payments yet today",
+  "livePaymentsEmptyMessage": "Payments made in the app at this business appear here instantly.",
+  "todayTotal": "Today: {count} payments · {total}",
+  "@todayTotal": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "total": {
+        "type": "String"
+      }
+    }
+  },
+  "workingAt": "Working at {business}",
+  "@workingAt": {
+    "placeholders": {
+      "business": {
+        "type": "String"
+      }
+    }
+  },
+  "ownerActivityTab": "Activity",
+  "ownerProgramTab": "Program",
+  "ownerStaffTab": "Staff",
+  "ownerBusinessTab": "Business",
+  "rangeToday": "Today",
+  "range7d": "7 days",
+  "range30d": "30 days",
+  "kpiPayments": "Payments",
+  "kpiRevenue": "Revenue",
+  "kpiStamps": "Stamps issued",
+  "kpiRewards": "Rewards redeemed",
+  "kpiNewCustomers": "New customers",
+  "kpiReturning": "Returning",
+  "recentTransactions": "Recent transactions",
+  "noTransactions": "No transactions in this period",
+  "statusPending": "Pending",
+  "statusSucceeded": "Paid",
+  "statusFailed": "Failed",
+  "statusRefunded": "Refunded",
+  "programBuilderTitle": "Loyalty program",
+  "templates": "Start from a template",
+  "stampsNeeded": "Stamps needed",
+  "earnRuleLabel": "What earns a stamp",
+  "earnVisit": "Visit",
+  "earnPayment": "Payment",
+  "minSpendLabel": "Minimum spend per stamp (optional)",
+  "rewardLabel": "Reward",
+  "rewardHint": "e.g. a free haircut",
+  "expiryLabel": "Stamps expire after (days)",
+  "previewTitle": "Preview — what customers see",
+  "programActive": "Program active",
+  "programActiveHint": "Paused programs stop issuing stamps.",
+  "saveProgram": "Save program",
+  "programSaved": "Program saved",
+  "programVersionNote": "Changing the target or reward creates a new version. Existing cards keep their original target until redeemed.",
+  "rewardRequired": "Enter the reward",
+  "staffTitle": "Staff",
+  "addStaff": "Add staff",
+  "staffEmpty": "No staff yet",
+  "staffEmptyMessage": "Add staff by name and phone. They sign in with that number and get the scanner.",
+  "removeStaff": "Remove",
+  "removeStaffConfirm": "Remove {name} from your staff?",
+  "@removeStaffConfirm": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "staffAdded": "Staff added",
+  "businessProfileTitle": "Business profile",
+  "businessName": "Business name",
+  "category": "Category",
+  "description": "Description",
+  "businessSaved": "Business profile saved",
+  "noProgramYet": "No program yet — set one up to start issuing stamps.",
+  "walletSubtitle": "{count} cards · {ready} ready to redeem",
+  "@walletSubtitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "ready": {
+        "type": "int"
+      }
+    }
+  },
+  "yourLoyalty": "Your loyalty",
+  "scanToCollect": "Scan to collect",
+  "showAtCounter": "Show at the counter",
+  "account": "Account",
+  "preferences": "Preferences",
+  "activity": "Activity",
+  "secured": "Secure code · rotates automatically",
+  "howItWorks": "How it works",
+  "reachOut": "Contact",
+  "info": "Info",
+  "dashboard": "Dashboard",
+  "manage": "Manage",
+  "counter": "Counter",
+  "today": "Today",
+  "authWelcome": "Welcome",
+  "authHeroTitle": "Every stamp card,\none wallet.",
+  "authHeroSubtitle": "Collect stamps at your favourite places and unlock rewards.",
+  "stepOf": "Step {step} of {total}",
+  "@stepOf": {
+    "placeholders": {
+      "step": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "privacyNote": "Your number is only used to sign you in. We never share it.",
+  "smsNote": "By continuing you agree to receive a one-time code by SMS.",
+  "didNotGetCode": "Didn't get a code?",
+  "editNumber": "Edit",
+  "perkNoPassword": "No password",
+  "perkFree": "Free to join",
+  "perkRewards": "Instant rewards",
+  "birthdayPick": "Add your birthday",
+  "codeSubtitleShort": "We texted a 6-digit code to this number.",
+  "onboardingStampChip": "+1 stamp",
+  "onboardingNearby": "Near you"
+}
