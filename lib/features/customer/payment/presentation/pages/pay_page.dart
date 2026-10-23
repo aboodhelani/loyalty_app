@@ -17,10 +17,10 @@ import '../../../../../shared/presentation/widgets/icon_badge.dart';
 import '../../../../../shared/presentation/widgets/program_text.dart';
 import '../../domain/usecases/payment_usecases.dart';
 import '../bloc/payment_bloc.dart';
-import '../widgets/apple_pay_button.dart';
+import '../widgets/wallet_pay_button.dart';
 import '../../../../../core/styles/app_icons.dart';
 
-/// Pay (C6): business pre-selected, amount input, Apple Pay.
+/// Pay (C6): business pre-selected, amount input, Apple Pay / Google Pay.
 class PayPage extends StatelessWidget {
   final Business business;
 
@@ -199,8 +199,7 @@ class _PayViewState extends State<_PayView> {
           bottomNavigationBar: SafeArea(
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(20.w, 8.h, 20.w, 12.h),
-              child: ApplePayButton(
-                label: s.payWithApplePay,
+              child: WalletPayButton(
                 loading: busy,
                 onPressed: _value == null ? null : () => context.read<PaymentBloc>().add(PayPressedEvent(_value!)),
               ),

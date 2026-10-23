@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -240,7 +242,7 @@ class _PayArt extends StatelessWidget {
         PositionedDirectional(
           bottom: 44.h,
           start: 12.w,
-          child: _Chip(icon: AppIcons.apple, label: 'Pay', color: AppColors.applePay),
+          child: _Chip(icon: Platform.isAndroid ? AppIcons.google : AppIcons.apple, label: 'Pay', color: AppColors.applePay),
         ),
       ],
     );

@@ -7,6 +7,8 @@
         android:label="Loyalty"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <!-- Google Pay through Stripe (the Android counterpart of Apple Pay). -->
+        <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true"/>
         <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyDi5CX46VScxslaBw0i232d8r2Edt42zKU"/>
         <activity
             android:name=".MainActivity"

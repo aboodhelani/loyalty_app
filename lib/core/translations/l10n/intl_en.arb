@@ -228,7 +228,7 @@
   "onboardingTitle1": "All your loyalty cards in one place",
   "onboardingBody1": "Cafés, salons, barbers, car washes and more — every stamp card lives in one wallet.",
   "onboardingTitle2": "Pay and get stamped automatically",
-  "onboardingBody2": "Pay with Apple Pay in the app and your stamp lands on your card instantly.",
+  "onboardingBody2": "Pay in the app with Apple Pay or Google Pay and your stamp lands on your card instantly.",
   "onboardingTitle3": "Find rewards near you",
   "onboardingBody3": "Allow location to see participating businesses around you on the map.",
   "allowLocation": "Allow location",
@@ -418,5 +418,6 @@
   "birthdayPick": "Add your birthday",
   "codeSubtitleShort": "We texted a 6-digit code to this number.",
   "onboardingStampChip": "+1 stamp",
-  "onboardingNearby": "Near you"
+  "onboardingNearby": "Near you",
+  "payWithGooglePay": "Pay with Google Pay"
 }

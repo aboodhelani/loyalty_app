@@ -30,6 +30,7 @@ class AppIcons {
   static const IconData directions = IconData(0xeade, fontFamily: 'PhosphorFill', fontPackage: 'phosphor_flutter');
   static const IconData edit = IconData(0xe3b4, fontFamily: 'PhosphorRegular', fontPackage: 'phosphor_flutter');
   static const IconData gift = IconData(0xe276, fontFamily: 'PhosphorRegular', fontPackage: 'phosphor_flutter');
+  static const IconData google = IconData(0xe292, fontFamily: 'PhosphorBold', fontPackage: 'phosphor_flutter');
   static const IconData heart = IconData(0xe2a8, fontFamily: 'PhosphorFill', fontPackage: 'phosphor_flutter');
   static const IconData history = IconData(0xe1a0, fontFamily: 'PhosphorRegular', fontPackage: 'phosphor_flutter');
   static const IconData info = IconData(0xe2ce, fontFamily: 'PhosphorRegular', fontPackage: 'phosphor_flutter');

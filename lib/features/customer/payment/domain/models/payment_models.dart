@@ -1,7 +1,7 @@
 import '../../../../../shared/domain/models/json_utils.dart';
 
 /// Response of `POST /payments`. With gateway `stripe` the app presents Apple
-/// Pay through flutter_stripe; with gateway `mock` (dev servers) it calls
+/// Pay (iOS) or Google Pay (Android) through flutter_stripe; with gateway `mock` (dev servers) it calls
 /// `/payments/:id/mock-confirm` instead.
 class PaymentIntent {
   final String transactionId;

@@ -24,7 +24,7 @@ class PaymentIdle extends PaymentState {
   const PaymentIdle({this.error});
 }
 
-/// Creating the intent and showing the Apple Pay sheet.
+/// Creating the intent and showing the wallet sheet.
 class PaymentAuthorizing extends PaymentState {}
 
 /// Paid; waiting for the backend to settle it and issue the stamp.
@@ -35,7 +35,7 @@ class PaymentSucceeded extends PaymentState {
   const PaymentSucceeded(this.transaction);
 }
 
-/// Pay screen (C6): create the payment, authorize it with Apple Pay, then wait
+/// Pay screen (C6): create the payment, authorize it with Apple Pay or Google Pay, then wait
 /// for the webhook-driven result (spec §9).
 class PaymentBloc extends Bloc<PaymentEvent, PaymentState> {
   final Business business;

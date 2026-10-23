@@ -100,7 +100,7 @@ class AppColors {
   static const failedRed = Color(0xFFB4462C);
   static const destructiveIcon = Color(0xFFB4462C);
 
-  /// Apple Pay buttons are black by Apple's guidelines.
+  /// Wallet buttons (Apple Pay, Google Pay) are black per both brands.
   static const applePay = Color(0xFF000000);
 
   // Category accents — map pins and placeholder covers.

@@ -31,7 +31,7 @@ class AuthorizePaymentParams {
   const AuthorizePaymentParams(this.intent, this.merchantName);
 }
 
-/// Apple Pay sheet → Face ID. Right(false) when the customer cancels.
+/// Wallet sheet (Apple Pay / Google Pay). Right(false) when the customer cancels.
 class AuthorizePaymentUseCase extends UseCase<bool, AuthorizePaymentParams> {
   final PaymentRepo repository;
 
